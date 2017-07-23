@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="box"><img src="./img/flowers4.gif" alt=""></div>
+<div class="title">
+    <div class="swiper-container t2" style="height:80px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s"
+                   swiper-animate-delay="0.3s">于千万人中遇见你所遇见的人,不早也不晚。我想这就是缘吧</p>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container t1">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="./image/in1.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in2.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in2.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in3.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in3.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in4.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in4.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in5.jpg" alt="我即将展示，请再等等" name="图片2">
+            <li class="swiper-slide">
+                <img src="./image/in5.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in6.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in6.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in7.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in7.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in8.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in8.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in9.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in9.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in0.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+            <li class="swiper-slide">
+                <img src="./image/in0.jpg" alt="我即将展示，请再等等" name="图片1">
+                <img src="./image/in1.jpg" alt="我即将展示，请再等等" name="图片2">
+            </li>
+        </ul>
+        <!--分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="fr page"><a href="./swip.html">下一册</a></div>
+</div>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var bottom = new Swiper('.t1', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        mousewheelControl: true,
+        autoplay: 5000,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        spaceBetween: 10,
+    });
+    var top = new Swiper('.t2', {
+        onInit: function (swiper) {
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper);
+        }
+    });
+
+
+</script>
+</body>
+</html>
